@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,41 +15,75 @@
 </head>
 <body>
     <main class="main">
-        <div class="titulo">
-            <h1>Cadastrar nova demanda:</h1>
-        </div>
-
         <div class="card-form">
+            <header class="cabecalho">
+                <h1>Cadastrar nova demanda</h1>
+                <p class="subtitulo">Campos com <span class="obrigatorio">*</span> são obrigatórios.</p>
+            </header>
+
             <form id="form-cadastro" class="form" novalidate>
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
+                <div class="campo">
+                    <label for="nome">Nome <span class="obrigatorio">*</span></label>
+                    <input type="text" name="nome" id="nome" maxlength="100"
+                           placeholder="Ex.: Corrigir erro no login">
+                </div>
 
-                <label for="descricao">Descrição:</label>
-                <input type="text" name="descricao" id="descricao">
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <textarea name="descricao" id="descricao" rows="4"
+                              placeholder="Descreva o que precisa ser feito e o resultado esperado"></textarea>
+                </div>
 
-                <label for="tipo">Tipo:</label>
-                <select name="tipo" id="tipo">
-                    <option value="tarefa">Tarefa</option>
-                    <option value="defeito">Defeito</option>
-                    <option value="melhoria">Melhoria</option>
-                </select>
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label for="tipo">Tipo <span class="obrigatorio">*</span></label>
+                        <select name="tipo" id="tipo">
+                            <option value="tarefa">Tarefa</option>
+                            <option value="defeito">Defeito</option>
+                            <option value="melhoria">Melhoria</option>
+                        </select>
+                    </div>
 
-                <label for="prioridade">Prioridade</label>
-                <select name="prioridade" id="prioridade">
-                    <option value="baixa">Baixa</option>
-                    <option value="media">Média</option>
-                    <option value="alta">Alta</option>
-                    <option value="critica">Crítica</option>
-                </select>
+                    <div class="campo">
+                        <label for="prioridade">Prioridade <span class="obrigatorio">*</span></label>
+                        <select name="prioridade" id="prioridade">
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta</option>
+                            <option value="critica">Crítica</option>
+                        </select>
+                    </div>
+                </div>
 
-                <label for="projeto">Projeto:</label>
-                <input type="text" name="projeto" id="projeto">
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label for="projeto">Projeto <span class="obrigatorio">*</span></label>
+                        <select name="projeto" id="projeto">
+                            <option value="projeto1">Projeto 1</option>
+                            <option value="projeto2">Projeto 2</option>
+                        </select>
+                    </div>
 
-                <label for="responsavel">Responsável:</label>
-                <input type="text" name="responsavel" id="responsavel">
+                    <div class="campo">
+                        <label for="responsavel">Responsável</label>
+                        <select name="responsavel" id="responsavel">
+                            <option value="funcionario1">Funcionário 1</option>
+                            <option value="funcionario2">Funcionário 2</option>
+                        </select>
+                    </div>
+                </div>
 
-                <label for="prazo">Prazo:</label>
-                <input type="date" name="prazo" id="prazo">
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label for="prazo">Prazo</label>
+                        <input type="date" name="prazo" id="prazo">
+                    </div>
+                </div>
+
+                <div class="acoes">
+                    <button type="reset" class="botao botao-secundario">Limpar</button>
+                    <button type="submit" class="botao botao-primario">Cadastrar demanda</button>
+                </div>
             </form>
         </div>
     </main>
