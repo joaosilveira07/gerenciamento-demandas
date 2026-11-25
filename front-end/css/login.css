@@ -265,6 +265,30 @@
     color: var(--texto-suave);
 }
 
+.oculto {
+    display: none;
+}
+
+#erroEmail {
+    background-color: #ff9999;
+    color: #7e0e0e;
+
+    border-radius: 6px;
+    border-left: 4px solid #b42a2a;
+
+    padding: 10px 16px;
+}
+
+#erroSenha {
+    background-color: #ff9999;
+    color: #7e0e0e;
+
+    border-radius: 6px;
+    border-left: 4px solid #b42a2a;
+
+    padding: 10px 16px;
+}
+
 @media (max-width: 800px) {
     .esquerda {
         display: none;
