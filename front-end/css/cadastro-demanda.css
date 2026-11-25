@@ -1,0 +1,172 @@
+.main {
+    --cor-texto: #1f2937;
+    --cor-texto-suave: #6b7280;
+    --cor-borda: #d1d5db;
+    --cor-foco: #2563eb;
+    --cor-obrigatorio: #dc2626;
+    --raio: 8px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: var(--fundo-claro);
+
+    min-height: 100vh;
+    padding: 40px 16px;
+    box-sizing: border-box;
+}
+
+.card-form {
+    width: 100%;
+    max-width: 680px;
+
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    margin-bottom: 24px;
+}
+
+.cabecalho h1 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    color: var(--cor-texto);
+}
+
+.subtitulo {
+    margin: 0;
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+}
+
+.obrigatorio {
+    color: var(--cor-obrigatorio);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cor-texto);
+}
+
+.linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--cor-texto);
+
+    padding: 10px 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: #fff;
+
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 96px;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9ca3af;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--cor-foco);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.botao {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 10px 20px;
+    border-radius: var(--raio);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.botao-primario {
+    background: var(--cor-foco);
+    color: #fff;
+    border: 1px solid var(--cor-foco);
+}
+
+.botao-primario:hover {
+    background: #1d4ed8;
+}
+
+.botao-secundario {
+    background: #fff;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+}
+
+.botao-secundario:hover {
+    background: #f3f4f6;
+}
+
+@media (max-width: 600px) {
+    .card-form {
+        padding: 20px;
+    }
+
+    .linha-dupla {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        flex-direction: column-reverse;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}
