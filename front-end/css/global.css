@@ -1,0 +1,25 @@
+:root {
+    --destaque: #4f46e5;
+    --destaque-escuro: #4338ca;
+    --escuro: #1e1e2e;
+    --texto: #1f2937;
+    --texto-suave: #6b7280;
+    --borda: #e5e7eb;
+    --fundo-claro: #f7f7fb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--texto);
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button {
+    font: inherit;
+}
